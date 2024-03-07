@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Syncthing start service
+GenericName=Syncthing start service
+X-GNOME-FullName=LanguageTool start service
+Exec=/bin/sh -c "/usr/bin/systemctl is-active --user --quiet syncthing.service || { /usr/bin/systemctl --user start syncthing.service && zenity --notification --window-icon=syncthing --text 'Syncthing service started'; }"
+Icon=syncthing
+Terminal=false
+TryExec=syncthing
+Categories=Network;GTK;

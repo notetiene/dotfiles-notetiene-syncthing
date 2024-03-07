@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Syncthing stop service
+GenericName=Syncthing stop service
+X-GNOME-FullName=Syncthing stop service
+Exec=/bin/sh -c "/usr/bin/systemctl is-active --user --quiet syncthing.service && /usr/bin/systemctl --user stop syncthing.service && zenity --notification --window-icon=syncthing --text 'Syncthing service stopped'"
+Icon=syncthing
+Terminal=false
+TryExec=syncthing
+Categories=Network;GTK;
